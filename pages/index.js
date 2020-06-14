@@ -1,5 +1,13 @@
 import Head from 'next/head'
 
-export default function Home() {
+const siteinfo = {
+    title: 'Title of Index Page',
+    description: 'Description of Index Page'
+};
+const Home = () => {
   return (<></>)
 }
+Home.getInitialProps = () => {
+    return { siteinfo: siteinfo };
+};
+export default Home;
