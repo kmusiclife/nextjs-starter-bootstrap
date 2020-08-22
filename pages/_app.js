@@ -15,7 +15,6 @@ class MyApp extends App {
         if (Component.getInitialProps) {
             pageProps = await Component.getInitialProps(ctx);
         }
-        router.basename = '/' + router.pathname.split('/')[1];
         pageProps.router = router;
         return { pageProps }
     }
